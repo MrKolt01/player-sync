@@ -2,7 +2,7 @@
 
 ### There is only one entry point '/' :
 
-socket.on('sync', (who,data) => io.in(socket.roomId).emit('sync',{who,data}))
+socket.on('sync', ({who,data}) => io.in(socket.roomId).emit('sync',{who,data}))
 
 Example on a client:
 ```
@@ -14,7 +14,7 @@ let socket = io(SERVER_URL, { query: { ROOM_ID } });
 if(socket){
 
   // commands listener
-  socket.on('sync', (who,data) => {
+  socket.on('sync', ({who,data}) => {
     // you logic here
   })
 }
@@ -26,6 +26,15 @@ if (socket) {
     who: 'Sender name',
     data: { /** some data **/}
   })
+}
+
+function setAudioSignal(audio: Audio) {
+  if (socket) {
+    socket.emit('sync', {
+      who: name,
+      data: { command: Command.SetAudio, json: audio },
+    })
+  }
 }
 
     

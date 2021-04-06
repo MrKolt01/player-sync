@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
   // присоединяемся к комнате (входим в нее)
   socket.join(roomId)
 
-  socket.on('sync', (who,data) => io.in(socket.roomId).emit('sync',{who,data}))
+  socket.on('sync', ({who,data}) => io.in(socket.roomId).emit('sync',{who,data}))
 
   // обрабатываем отключение сокета-пользователя
   socket.on('disconnect', () => {
