@@ -1,10 +1,36 @@
-# Simple sync com
+# Simple sync command using web socket connection with rooms support
 
-This is the source code for a very simple chat example used for
-the [Getting Started](http://socket.io/get-started/chat/) guide
-of the Socket.IO website.
+### There is only one entry point '/' :
 
-Please refer to it to learn how to run this application.
+socket.on('sync', (who,data) => io.in(socket.roomId).emit('sync',{who,data}))
+
+Example on a client:
+```
+const SERVER_URL = 'http://localhost:3030';
+const ROOM_ID = 'room id';
+
+let socket = io(SERVER_URL, { query: { ROOM_ID } });
+
+if(socket){
+
+  // commands listener
+  socket.on('sync', (who,data) => {
+    // you logic here
+  })
+}
+
+// send sync command example:
+if (socket) {
+  socket.emit('sync',
+  {
+    who: 'Sender name',
+    data: { /** some data **/}
+  })
+}
+
+    
+```
+
 
 You can also spin up a free Heroku dyno to test it out:
 
