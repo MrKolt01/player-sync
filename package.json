@@ -1,7 +1,7 @@
 {
-  "name": "player-sync",
-  "version": "0.0.1",
-  "description": "sync music and video",
+  "name": "simple-socket-syncer",
+  "version": "1.0.0",
+  "description": "simple sync commands with socket",
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^4.0.1"

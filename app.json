@@ -1,8 +1,8 @@
 {
-  "name": "Socket-Chat-Example",
-  "description": "my first socket.io app",
-  "website": "https://github.com/socketio/chat-example",
-  "repository": "https://github.com/socketio/chat-example",
+  "name": "Simple Socket Syncer",
+  "description": "simple sync commands with socket",
+  "website": "https://github.com/MrKolt01/simple-syncer",
+  "repository": "https://github.com/MrKolt01/simple-syncer",
   "logo": "https://node-js-sample.herokuapp.com/node.svg",
   "success_url": "/",
   "keywords": [
