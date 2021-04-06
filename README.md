@@ -47,4 +47,4 @@ You can also spin up a free Heroku dyno to test it out:
 
 Or run it on [Repl.it](https://repl.it/):
 
-[![Run on Repl.it](https://repl.it/badge/github/socketio/chat-example)](https://repl.it/github/socketio/chat-example)
+[![Run on Repl.it](https://repl.it/badge/github/MrKolt01/simple-syncer)](https://repl.it/github/MrKolt01/simple-syncer)
